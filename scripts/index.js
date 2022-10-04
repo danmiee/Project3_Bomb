@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 기본세팅
   boxShuffle();
   shuffleFlag = false;
-  cnt = 0;
 
   //DOM이 로드가 되면 반복문을 이용하여 num을 [0,0,0,0,0,0,0,0,1]로 초기화
   num.sort();
