@@ -62,10 +62,6 @@ const show = (click) => {
   let imgSrc = null;
   if(num[click-1]==0) {
     imgSrc = 'heart';
-  } else {
-    imgSrc = 'bomb';
-    shuffleFlag = false;
-    msgShow('FAIL😢');
   }
 
   document.getElementById(`box${click}`).innerHTML = `<img src="./images/${imgSrc}.png">`;
@@ -79,6 +75,12 @@ const show = (click) => {
     msgShow('SUCCESS😍');
   }
 
+  // 실패체크
+  if(num[click-1]==1) {
+    imgSrc = 'bomb';
+    shuffleFlag = false;
+    msgShow('FAIL😢');
+  }
 }
 
 // 초기화 함수
