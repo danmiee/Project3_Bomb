@@ -1,9 +1,3 @@
-const dispDom = (boardP, btP, msgP) => {
-  document.getElementById("board").style.display = boardP;
-  document.getElementById("bt").style.display = btP;
-  document.getElementById("msg").style.display = msgP;
-}
-
 //폭탄이 있는 위치를 나타내는 배열
 let num = [];
 
@@ -62,6 +56,8 @@ const show = (click) => {
   let imgSrc = null;
   if(num[click-1]==0) {
     imgSrc = 'heart';
+  } else {
+    imgSrc = 'bomb';
   }
 
   document.getElementById(`box${click}`).innerHTML = `<img src="./images/${imgSrc}.png">`;
